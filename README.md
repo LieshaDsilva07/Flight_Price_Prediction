@@ -55,7 +55,6 @@ flight_price_prediction/
 </ul>
 
 <p>📘 <a href="model/Flight_price_pred.ipynb">Notebook</a><br />
-🌐 <a href="model/Flight_price_pred.html">HTML Version</a></p>
 
 <hr />
 
