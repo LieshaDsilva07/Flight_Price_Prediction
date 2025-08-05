@@ -49,7 +49,7 @@ flight_price_prediction/
 
 <h2>🤖 Machine Learning Model</h2>
 <ul>
-  <li><strong>Algorithm:</strong> Regression (e.g., Random Forest / Linear Regression)</li>
+  <li><strong>Algorithm:</strong> Regression </li>
   <li><strong>Accuracy:</strong> ~93.7%</li>
   <li><strong>Tech stack:</strong> Python, Pandas, Scikit-learn, NumPy, Matplotlib, Seaborn</li>
 </ul>
