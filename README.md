@@ -1,79 +1,108 @@
-<h1>✈️ Flight Price Prediction with SQL-Based Data Exploration</h1>
+<h1>✈️ Flight Price Prediction App</h1>
 
-<p>This project predicts airline ticket prices using machine learning techniques and includes structured SQL-based data exploration to understand key trends and improve model performance.</p>
+<p>
+An end-to-end Machine Learning project to predict airline ticket prices using <b>Python, SQL, and Streamlit</b>.  
+</p>
 
-<hr />
+<hr>
+
+<h2>🔗 Live Demo</h2>
+<p>
+👉 <a href="https://flightpriceprediction-liesha.streamlit.app" target="_blank">Flight Price Prediction App</a>  
+<br>
+⚠️ <i>Note: App is hosted on free Streamlit Cloud — it may take up to a minute to load when idle.</i>
+</p>
+
+<h2>🎥 Demo</h2>
+<p>
+  <img src="data/demo.gif" alt="Flight Price Prediction Demo" width="800"/>
+</p>
+
+<hr>
+
+<h2>📸 Screenshot</h2>
+<p>
+  <img src="data/ss.png" alt="App Screenshot" width="700"/>
+</p>
+
+<hr>
 
 <h2>📂 Project Structure</h2>
 
 <pre>
-flight_price_prediction/
+FLIGHT_PRICE_PREDICTION/
 ├── data/
 │   └── Data_Train.csv
 ├── model/
-│   ├── Flight_price_pred.ipynb
-│   ├── Flight_price_pred.html
-│   └── flight_price_model.pkl
+│   ├── flight_price_model.pkl
+│   ├── model_columns.json
+│   └── Flight_price_pred.ipynb
 ├── sql_queries/
 │   └── queries.sql
+├── flight_app.py
+├── requirements.txt
+└── README.md
 </pre>
 
-<hr />
+<hr>
 
-<h2>📊 Project Goals</h2>
+<h2>🎯 Project Goals</h2>
 <ul>
-  <li>Understand factors affecting airline ticket prices (e.g. stops, airlines, routes)</li>
-  <li>Build a regression model to accurately predict flight prices</li>
-  <li>Perform SQL-based data exploration to derive insights</li>
-  <li>Improve model performance through feature engineering and EDA</li>
+  <li>Understand factors affecting airline ticket prices (e.g., stops, airlines, routes).</li>
+  <li>Perform <b>SQL-based exploratory analysis</b>.</li>
+  <li>Build a regression model to predict flight ticket prices.</li>
+  <li>Deploy an interactive <b>Streamlit app</b>.</li>
 </ul>
 
-<hr />
+<hr>
 
 <h2>🔍 SQL-Based Data Exploration</h2>
-<p>Before modeling, I performed SQL analysis using <strong>MySQL</strong> to uncover trends in the flight data:</p>
-
+<p>Some key queries from <code>queries.sql</code>:</p>
 <ul>
-  <li>Average price by airline</li>
+  <li>Average price per airline</li>
   <li>Number of flights from each source</li>
   <li>Top 5 most expensive flights</li>
-  <li>Average price based on number of stops</li>
-  <li>Cheapest flights per airline</li>
-  <li>Day-wise price trends</li>
-  <li>Most common flight routes</li>
+  <li>Average price by number of stops</li>
+  <li>Cheapest flight per airline</li>
+  <li>Most common routes</li>
 </ul>
 
-<p>📄 <strong>SQL script:</strong> <a href="sql_queries/queries.sql">sql_queries/queries.sql</a></p>
-
-<hr />
+<hr>
 
 <h2>🤖 Machine Learning Model</h2>
 <ul>
-  <li><strong>Algorithm:</strong> Regression </li>
-  <li><strong>Accuracy:</strong> ~93.7%</li>
-  <li><strong>Tech stack:</strong> Python, Pandas, Scikit-learn, NumPy, Matplotlib, Seaborn</li>
+  <li><b>Algorithm</b>: Random Forest Regressor</li>
+  <li><b>Performance</b>: R² ~83%, MAE ≈ ₹1100</li>
+  <li><b>Libraries</b>: pandas, numpy, scikit-learn, matplotlib, seaborn</li>
 </ul>
 
-<p>📘 <a href="model/Flight_price_pred.ipynb">Notebook</a><br />
-
-<hr />
-
-<h2>📌 Key Libraries Used</h2>
+<p><b>Key Features Engineered:</b></p>
 <ul>
-  <li>pandas, numpy, scikit-learn, matplotlib, seaborn</li>
-  <li>MySQL for structured querying and analysis</li>
+  <li>Duration (hours, minutes)</li>
+  <li>Journey Day & Month</li>
+  <li>Departure & Arrival times (hour, minute)</li>
+  <li>Stops (encoded as numeric)</li>
+  <li>Airline, Source, Destination (one-hot encoded)</li>
 </ul>
 
-<hr />
+<hr>
 
-<h2>🧠 What I Learned</h2>
+<h2>⚙️ Tech Stack</h2>
 <ul>
-  <li>Real-world data preprocessing and cleaning (e.g., duration conversion)</li>
-  <li>Feature engineering for regression tasks</li>
-  <li>Exploratory analysis using SQL + Python</li>
-  <li>Model evaluation using metrics: R², MAE, RMSE</li>
+  <li><b>Python</b> → Data preprocessing, model training</li>
+  <li><b>SQL</b> → Data exploration</li>
+  <li><b>Scikit-learn</b> → ML modeling</li>
+  <li><b>Streamlit</b> → Interactive web app deployment</li>
+  <li><b>Joblib</b> → Model serialization</li>
 </ul>
 
-<hr />
+<hr>
 
-
+<h2>📘 What I Learned</h2>
+<ul>
+  <li>Real-world data preprocessing (e.g., converting duration strings to numeric).</li>
+  <li>Feature engineering for regression tasks.</li>
+  <li>SQL queries for structured exploratory analysis.</li>
+  <li>Model evaluation using R², MAE, RMSE.</li>
+  <li>Deploying ML models with Streamlit.</li>
+</ul>
